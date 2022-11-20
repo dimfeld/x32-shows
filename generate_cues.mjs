@@ -77,15 +77,17 @@ function processCueLine(line, i) {
   let [name, rest] = line.split(':');
   let characters = (rest || '').split(',').map((c) => c.trim()).filter(Boolean);
 
-  const index = cueList.length;
-  const fullIndex = index.toString().padStart(3, '0');
+  const cueIndex = cueList.length;
+  const snippetIndex = snippetList.length;
+  const fullCueIndex = cueIndex.toString().padStart(3, '0');
+  const fullSnippetIndex = snippetIndex.toString().padStart(3, '0');
 
   const snippetContents = createSnippet(name, characters);
 
-  cueList.push(`cue/${fullIndex} ${index + 1}00 "${name}" 0 -1 ${index} 0 1 0 0`);
-  snippetList.push(`snippet/${fullIndex} "${name}" 128 ${cueChannelBitmap} 0 0 1`);
+  cueList.push(`cue/${fullCueIndex} ${cueIndex + 1}00 "${name}" 0 -1 ${snippetIndex} 0 1 0 0`);
+  snippetList.push(`snippet/${fullSnippetIndex} "${name}" 128 ${cueChannelBitmap} 0 0 1`);
 
-  fs.writeFileSync(`${showName}.${fullIndex}.snp`, snippetContents + '\n');
+  fs.writeFileSync(`${showName}.${fullSnippetIndex}.snp`, snippetContents + '\n');
 }
 
 fs.readFileSync(cueListFile).toString()
