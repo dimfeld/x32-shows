@@ -25,7 +25,19 @@ const characterChannels = Object.fromEntries(sceneLines
   .filter((x) => x && x[1] <= numChannels));
 console.dir(characterChannels);
 
-function createSnippet(name, characters) {
+const showHeader = [
+  `#4.0#`,
+  `show "${showName}" 0 0 0 0 0 0 0 0 0 0 "3.07"`,
+];
+
+const cueList = [];
+const snippetList = [];
+
+const cueChannelBitmap = (1 << numChannels) - 1;
+
+function createSnippet(name, characters, channelBitmap = cueChannelBitmap) {
+  const index = snippetList.length;
+  const fullIndex = index.toString().padStart(3, '0');
   const contents = [
     `#4.0# "${name}" 128 ${cueChannelBitmap} 0 0 1`.padEnd(127, ' '),
   ];
@@ -49,18 +61,14 @@ function createSnippet(name, characters) {
     contents.push(line);
   }
 
-  return contents.join('\n');
+  const snippetFile = contents.join('\n');
+  snippetList.push(`snippet/${fullIndex} "${name}" 128 ${channelBitmap} 0 0 1`);
+  fs.writeFileSync(`${showName}.${fullIndex}.snp`, snippetFile + '\n');
+
+  return { index, fullIndex };
 }
 
-const showHeader = [
-  `#4.0#`,
-  `show "${showName}" 0 0 0 0 0 0 0 0 0 0 "3.07"`,
-];
-
-const cueList = [];
-const snippetList = [];
-
-const cueChannelBitmap = (1 << numChannels) - 1;
+const muteAllSnippet = createSnippet('Mute All Actors', []);
 
 const cueListFile = 'cues.txt';
 function processCueLine(line, i) {
@@ -78,16 +86,11 @@ function processCueLine(line, i) {
   let characters = (rest || '').split(',').map((c) => c.trim()).filter(Boolean);
 
   const cueIndex = cueList.length;
-  const snippetIndex = snippetList.length;
   const fullCueIndex = cueIndex.toString().padStart(3, '0');
-  const fullSnippetIndex = snippetIndex.toString().padStart(3, '0');
 
-  const snippetContents = createSnippet(name, characters);
+  const snippet = characters.length ? createSnippet(name, characters) : muteAllSnippet;
 
-  cueList.push(`cue/${fullCueIndex} ${cueIndex + 1}00 "${name}" 0 -1 ${snippetIndex} 0 1 0 0`);
-  snippetList.push(`snippet/${fullSnippetIndex} "${name}" 128 ${cueChannelBitmap} 0 0 1`);
-
-  fs.writeFileSync(`${showName}.${fullSnippetIndex}.snp`, snippetContents + '\n');
+  cueList.push(`cue/${fullCueIndex} ${cueIndex + 1}00 "${name}" 0 -1 ${snippet.index} 0 1 0 0`);
 }
 
 fs.readFileSync(cueListFile).toString()
