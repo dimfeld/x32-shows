@@ -3,7 +3,7 @@
 import * as fs from 'fs';
 
 const showName = 'HS2022';
-const inputSceneFile = 'orig/HopeStat.022.scn';
+const inputSceneFile = 'HopeStat2022.scn';
 
 const sceneData = fs.readFileSync(inputSceneFile).toString();
 const sceneLines = sceneData.split('\n');
@@ -83,6 +83,48 @@ function processCueLine(line, i) {
 
   console.error(line);
   let [name, rest] = line.split(':');
+
+  rest = rest.trim();
+  if(rest.startsWith('SNIPPET ')) {
+    parseFixedSnippet(name, rest);
+  } else {
+    parseCharacters(name, rest);
+  }
+}
+
+const fixedSnippets = new Map();
+
+function parseFixedSnippet(name, rest) {
+  const snippetName = rest.slice('SNIPPET '.length).trim();
+  let snippet = fixedSnippets.get(snippetName);
+  if(!snippet) {
+    const snippetContents = fs.readFileSync(`${snippetName}.snp`).toString();
+
+    const index = snippetList.length;
+    const fullIndex = index.toString().padStart(3, '0');
+
+    const header = /^\#[0-9.]+\# (.*)$/.exec(snippetContents.split('\n')[0])[1].trim();
+    snippetList.push(`snippet/${fullIndex} ${header}`);
+
+
+    snippet = {
+      contents: snippetContents,
+      header,
+      index,
+      fullIndex,
+    };
+
+    fixedSnippets.set(snippetName, snippet);
+  }
+
+  const cueIndex = cueList.length;
+  const fullCueIndex = cueIndex.toString().padStart(3, '0');
+
+  cueList.push(`cue/${fullCueIndex} ${cueIndex + 1}00 "${name}" 0 -1 ${snippet.index} 0 1 0 0`);
+}
+
+function parseCharacters(name, rest) {
+
   let characters = (rest || '').split(',').map((c) => c.trim()).filter(Boolean);
 
   const cueIndex = cueList.length;
