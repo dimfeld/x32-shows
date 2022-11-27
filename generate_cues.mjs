@@ -3,7 +3,7 @@
 import * as fs from 'fs';
 
 const showName = 'HS2022';
-const inputSceneFile = 'HopeStat2022.scn';
+const inputSceneFile = '../HopeStat2022.scn';
 
 const sceneData = fs.readFileSync(inputSceneFile).toString();
 const sceneLines = sceneData.split('\n');
@@ -35,12 +35,10 @@ const snippetList = [];
 
 const cueChannelBitmap = (1 << numChannels) - 1;
 
+const channelSnippets = new Map();
 function createSnippet(name, characters, channelBitmap = cueChannelBitmap) {
   const index = snippetList.length;
   const fullIndex = index.toString().padStart(3, '0');
-  const contents = [
-    `#4.0# "${name}" 128 ${cueChannelBitmap} 0 0 1`.padEnd(127, ' '),
-  ];
 
   const enabled = new Set();
 
@@ -54,6 +52,18 @@ function createSnippet(name, characters, channelBitmap = cueChannelBitmap) {
     enabled.add(channel);
   }
 
+  let snippetKey = [...enabled].sort((a, b) => a - b).join(',');
+  let existing = channelSnippets.get(snippetKey);
+  if(existing) {
+    return existing;
+  }
+
+  name ||= snippetKey;
+
+  const contents = [
+    `#4.0# "${name}" 128 ${cueChannelBitmap} 0 0 1`.padEnd(127, ' '),
+  ];
+
   for(let channel = 1; channel <= numChannels; ++channel) {
     const chName = channel.toString().padStart(2, '0');
     const status = enabled.has(channel) ? 'ON' : 'OFF';
@@ -65,7 +75,9 @@ function createSnippet(name, characters, channelBitmap = cueChannelBitmap) {
   snippetList.push(`snippet/${fullIndex} "${name}" 128 ${channelBitmap} 0 0 1`);
   fs.writeFileSync(`${showName}.${fullIndex}.snp`, snippetFile + '\n');
 
-  return { index, fullIndex };
+  let result = { index, fullIndex };
+  channelSnippets.set(snippetKey, result);
+  return result;
 }
 
 const muteAllSnippet = createSnippet('Mute All Actors', []);
@@ -115,6 +127,7 @@ function parseFixedSnippet(name, rest) {
     };
 
     fixedSnippets.set(snippetName, snippet);
+    fs.writeFileSync(`${showName}.${fullIndex}.snp`, snippetContents);
   }
 
   const cueIndex = cueList.length;
@@ -130,7 +143,7 @@ function parseCharacters(name, rest) {
   const cueIndex = cueList.length;
   const fullCueIndex = cueIndex.toString().padStart(3, '0');
 
-  const snippet = characters.length ? createSnippet(name, characters) : muteAllSnippet;
+  const snippet = characters.length ? createSnippet(null, characters) : muteAllSnippet;
 
   cueList.push(`cue/${fullCueIndex} ${cueIndex + 1}00 "${name}" 0 -1 ${snippet.index} 0 1 0 0`);
 }
