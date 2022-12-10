@@ -1,4 +1,4 @@
-This utility reads in a scene file, extracts the names on the channels, and then reads a `cues.txt`
+This utility is designed to work with the Behringer X32 sound mixer board. It reads in an X32 scene file, extracts the names on the channels, and then reads a `cues.txt`
 file to generate cues that mute and unmute those channels at the appropriate time.
 
 You can also reference preset snippets.
