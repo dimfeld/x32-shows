@@ -8,3 +8,9 @@ settings in `cues.txt`.
 
 This is intentionally simple, but there's a lot more you could probably do with this given the easy-to-read format of
 the snippets.
+
+Requirements:
+
+- Node.js 16 or greater
+- An X32 sound board
+- A USB drive to copy files between your computer and the board.
