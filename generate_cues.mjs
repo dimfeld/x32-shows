@@ -3,7 +3,7 @@
 import * as fs from 'fs';
 
 const showName = 'HS2022';
-const inputSceneFile = '../HopeStat2022.scn';
+const inputSceneFile = '../../HopeStat2022.scn';
 
 const sceneData = fs.readFileSync(inputSceneFile).toString();
 const sceneLines = sceneData.split('\n');

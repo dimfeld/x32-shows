@@ -1,0 +1,6 @@
+#4.0# "AvalanchePost" 192 0 1048576 4096 1                                                                                              
+/bus/05/mix/fader  +5.9
+/bus/05/mix/pan +0
+/bus/05/mix/on ON
+/dca/5/fader +10.0
+/dca/5/on ON
