@@ -13,8 +13,7 @@ Scene 2.2: Solly, Reverend, Ann, Nora, Bella
 SB Song Vol: SNIPPET Recorder -7
 Scene 2.3: Solly, Bella
 
-Scene 3: Frankie, Solly, Ralph, Adam, Evelyn
-Scene 3.0.1: Frankie, Solly, Jed, Ralph, Adam, Evelyn
+Scene 3: Frankie, Solly, Ralph, Adam, Evelyn, Jed
 Scene 3.1: Frankie, Solly, Jed, Ralph, Evelyn, Charles
 Scene 3.1.1: Solly, Reverend
 
