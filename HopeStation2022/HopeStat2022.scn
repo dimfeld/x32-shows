@@ -292,7 +292,7 @@
 /ch/08/mix/16 OFF   -oo
 /ch/08/grp %00000001 %000011
 /ch/08/automix OFF -12.0
-/ch/09/config "Evelyn" 42 WH 25
+/ch/09/config "Alice" 42 WH 25
 /ch/09/delay OFF   0.3
 /ch/09/preamp +0.0 OFF ON 24  79
 /ch/09/gate ON GATE -66.0 60.0 1  502  983 0
@@ -420,7 +420,7 @@
 /ch/12/mix/16 OFF   -oo
 /ch/12/grp %00000001 %100000
 /ch/12/automix OFF -12.0
-/ch/13/config "Charles" 41 WH 11
+/ch/13/config "George" 41 WH 11
 /ch/13/delay OFF   0.3
 /ch/13/preamp +0.0 OFF ON 24 128
 /ch/13/gate ON GATE -70.0 60.0 1  502  983 0

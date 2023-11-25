@@ -1,4 +1,4 @@
 #!/bin/bash
 set -ex
 ../generate_cues.mjs
-cp HS2022.* '/Volumes/PP - AUDIO/HS2022/'
+cp HS2022.* '/Volumes/USB DISK/HS2022/'
