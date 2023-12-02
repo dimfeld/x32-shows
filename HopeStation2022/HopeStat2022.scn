@@ -1061,13 +1061,13 @@
 /ch/32/grp %00000000 %000011
 /ch/32/automix OFF -12.0
 /auxin/01/config "iPod Jack" 55 GN 33
-/auxin/01/preamp +0.0 OFF
+/auxin/01/preamp +2.3 OFF
 /auxin/01/eq ON
-/auxin/01/eq/1 VEQ 112.5 -4.75 3.2
+/auxin/01/eq/1 VEQ 112.5 -4.75 0.3
 /auxin/01/eq/2 PEQ 496.6 +0.00 2.0
 /auxin/01/eq/3 PEQ 1k26 +3.50 2.8
 /auxin/01/eq/4 HShv 5k76 +2.50 2.0
-/auxin/01/mix OFF   -oo ON +0 OFF   -oo
+/auxin/01/mix ON  -7.9 ON +0 OFF   -oo
 /auxin/01/mix/01 OFF  -2.3 +0 PRE 0
 /auxin/01/mix/02 OFF  -3.0
 /auxin/01/mix/03 OFF  +7.5 +0 PRE 0
@@ -1084,7 +1084,7 @@
 /auxin/01/mix/14 OFF   -oo
 /auxin/01/mix/15 ON   -oo +0 POST 0
 /auxin/01/mix/16 ON   -oo
-/auxin/01/grp %00000000 %000000
+/auxin/01/grp %00010000 %000000
 /auxin/02/config "Computer" 62 GN 34
 /auxin/02/preamp -3.5 OFF
 /auxin/02/eq ON
@@ -1092,7 +1092,7 @@
 /auxin/02/eq/2 PEQ 363.9 +6.50 1.1
 /auxin/02/eq/3 VEQ 1k84 +4.00 2.0
 /auxin/02/eq/4 PEQ 7k09 +4.00 2.0
-/auxin/02/mix OFF  -3.9 ON +0 OFF   -oo
+/auxin/02/mix ON  -2.3 ON +0 OFF   -oo
 /auxin/02/mix/01 OFF  -0.3 +0 PRE 0
 /auxin/02/mix/02 OFF  -0.5
 /auxin/02/mix/03 OFF  -7.3 +0 PRE 0
@@ -1117,7 +1117,7 @@
 /auxin/03/eq/2 PEQ 496.6 +0.00 2.0
 /auxin/03/eq/3 PEQ 1k97 +0.00 2.0
 /auxin/03/eq/4 HShv 10k02 +0.00 2.0
-/auxin/03/mix OFF  -8.8 ON +0 OFF   -oo
+/auxin/03/mix OFF  -4.8 ON +0 OFF   -oo
 /auxin/03/mix/01 ON -27.5 +0 PRE 0
 /auxin/03/mix/02 OFF -26.5
 /auxin/03/mix/03 ON -26.5 +0 PRE 0
@@ -1160,14 +1160,14 @@
 /auxin/04/mix/15 ON   -oo +0 POST 0
 /auxin/04/mix/16 ON   -oo
 /auxin/04/grp %00000000 %000011
-/auxin/05/config "cd Playback" 60 RD 33
+/auxin/05/config "cd Playback" 60 RD 37
 /auxin/05/preamp -8.3 OFF
 /auxin/05/eq OFF
 /auxin/05/eq/1 PEQ 124.7 +0.00 2.0
 /auxin/05/eq/2 PEQ 496.6 +0.00 2.0
 /auxin/05/eq/3 PEQ 1k97 +0.00 2.0
 /auxin/05/eq/4 HShv 10k02 +0.00 2.0
-/auxin/05/mix OFF   -oo ON +0 OFF  -1.5
+/auxin/05/mix OFF  -2.9 ON +0 OFF  -1.5
 /auxin/05/mix/01 OFF -27.0 -100 <-EQ 0
 /auxin/05/mix/02 OFF -26.0
 /auxin/05/mix/03 OFF -10.0 -100 POST 0
@@ -1184,7 +1184,7 @@
 /auxin/05/mix/14 ON   -oo
 /auxin/05/mix/15 ON   -oo -100 POST 0
 /auxin/05/mix/16 ON   -oo
-/auxin/05/grp %00000000 %000000
+/auxin/05/grp %00010000 %000000
 /auxin/06/config "cd Playback" 60 RD 38
 /auxin/06/preamp -8.3 OFF
 /auxin/06/eq OFF
@@ -1192,7 +1192,7 @@
 /auxin/06/eq/2 PEQ 496.6 +0.00 2.0
 /auxin/06/eq/3 PEQ 1k97 +0.00 2.0
 /auxin/06/eq/4 HShv 10k02 +0.00 2.0
-/auxin/06/mix OFF   -oo ON +0 OFF  -1.5
+/auxin/06/mix OFF  -2.9 ON +0 OFF  -1.5
 /auxin/06/mix/01 OFF -27.0 +100 <-EQ 0
 /auxin/06/mix/02 OFF -26.0
 /auxin/06/mix/03 OFF -10.0 +100 POST 0
@@ -1209,7 +1209,7 @@
 /auxin/06/mix/14 ON   -oo
 /auxin/06/mix/15 ON   -oo +100 POST 0
 /auxin/06/mix/16 ON   -oo
-/auxin/06/grp %00000000 %000000
+/auxin/06/grp %00010000 %000000
 /auxin/07/config "USB L" 60 YE 39
 /auxin/07/preamp -5.5 OFF
 /auxin/07/eq OFF
@@ -1851,7 +1851,7 @@
 /main/st/eq/4 VEQ 158.9 -8.00 2.1
 /main/st/eq/5 PEQ 4k08 +2.25 1.6
 /main/st/eq/6 HCut 13k67 +0.75 3.7
-/main/st/mix ON -29.5 +0
+/main/st/mix ON   -oo +0
 /main/st/mix/01 ON -11.5 +0 POST 0
 /main/st/mix/02 ON  -4.0
 /main/st/mix/03 ON   -oo +0 POST 0
@@ -1886,7 +1886,7 @@
 /dca/3/config "AcousticGtr" 23 OFFi
 /dca/4 OFF   -oo
 /dca/4/config "Speaker" 45 OFFi
-/dca/5 ON  -8.4
+/dca/5 ON  +1.3
 /dca/5/config "Recorder" 70 YE
 /dca/6 OFF   -oo
 /dca/6/config "DCA" 70 OFF
@@ -1905,7 +1905,7 @@
 /fx/3/par 10 929 M 2/3 1/2 17 71 20k0 71 20 20 20k0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 /fx/4 AMBI
 /fx/4/source MIX16 MIX16
-/fx/4/par 16 1.50 22 15k58 28 -5.0 105 6k0 46 74 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+/fx/4/par 14 1.50 22 15k58 28 -5.0 105 6k0 46 74 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 /fx/5 GEQ2
 /fx/5/par -15.0 -15.0 -15.0 -15.0 -15.0 -15.0 -15.0 -4.5 -4.0 -8.0 0.0 0.0 -13.5 0.0 -5.0 -7.0 -2.5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
 /fx/6 GEQ2
@@ -2116,9 +2116,11 @@
 /headamp/125 +0.0 OFF
 /headamp/126 +0.0 OFF
 /headamp/127 +0.0 OFF
-/-stat/selidx Ch03
-/-stat/chfaderbank 0
+/-stat/selidx Aux6
+/-stat/chfaderbank 2
 /-stat/grpfaderbank 0
+/-stat/sendsonfader OFF
 /-stat/bussendbank 0
 /-stat/eqband 0
 /-stat/userbank 0
+/-stat/dcaspill 0
