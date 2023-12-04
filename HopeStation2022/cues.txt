@@ -1,7 +1,8 @@
-setup: SNIPPET Recorder norm
-start:
+setup: SNIPPET Start
+start: SNIPPET ComputerUnmuted
 
 Scene 1: Adam, Tom
+Mute Computer: SNIPPET ComputerMuted
 
 Scene 2: Solly, Adam, Jed
 Scene 2.0.1: Solly, Adam, Reverend
@@ -9,9 +10,9 @@ Scene 2.0.2: Solly, Adam, Reverend, Jed
 Scene 2.1: Solly, Adam, Reverend, Ann, Jed
 Scene 2.1.1: Solly, Adam, Reverend, Ann
 Scene 2.1.2: Solly, Reverend, Ann
-Scene 2.2: Solly, Reverend, Ann, Nora, Bella
+Scene 2.2: Solly, Ann, Nora, Bella
 # SB Song Vol: SNIPPET Recorder -7
-Scene 2.3: Solly, Bella
+Scene 2.3: Nora, Bella
 
 Scene 3: Frankie, Solly, Ralph, Adam, Alice, Jed
 Scene 3.1: Frankie, Solly, Jed, Ralph, Alice, George, Adam
@@ -87,7 +88,7 @@ Scene 14.2: Jacob, Reverend
 Scene 14.3: Jacob, Reverend, Viola
 Scene 14.4: Jacob, Reverend, Tom
 Scene 14.4 music: Jacob
-Scene 14.5: Reverend, Jacob
+Scene 14.5: Reverend, Jacob, Solly
 
 Scene 15: Solly, Ann, Jacob, Tom, Reverend
 Scene 15.1: Tom, Reverend
@@ -115,10 +116,10 @@ Scene 17.5: Solly, Reverend, Ann, Viola
 Scene 17.6: Solly, Reverend, Ann, Viola, Jed, Alice
 
 # Song Prep: SNIPPET Recorder -5
-Scene 18 song: Solly, Reverend, Alice, Jed, Ann, Viola
+Scene 18 song: Solly, Reverend, Alice, Ann, Viola, Bella
 Scene 18.1: Solly, Reverend
 # Hallelujah Vol: SNIPPET Recorder -20
-Scene 18.2: Alice, Solly, Adam, Reverend
+Scene 18.2: Alice, Adam, Reverend, Bella
 # Just as I am Vol: SNIPPET Recorder -10
 Scene 18.3: Reverend, Solly, Frankie, Alice
 Scene 18.4 song: Reverend, Solly, Frankie, Alice, Viola
