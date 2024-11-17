@@ -1,2 +1,5 @@
-#4.0# "Recorder norm" 64 0 0 4096 1                                                                                            
-/dca/5/fader  -3.0
+#4.0# "Recorder norm" 192 0 1048576 4096 1                                                                                              
+/bus/03/mix/pan +0
+/bus/03/mix/on ON
+/dca/5/fader -3.0
+/dca/5/on ON

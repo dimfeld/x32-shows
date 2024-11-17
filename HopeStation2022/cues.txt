@@ -11,17 +11,22 @@ Scene 2.1: Solly, Adam, Reverend, Ann, Jed
 Scene 2.1.1: Solly, Adam, Reverend, Ann
 Scene 2.1.2: Solly, Reverend, Ann
 Scene 2.2: Solly, Ann, Nora, Bella
-# SB Song Vol: SNIPPET Recorder -7
+# SB Song 1: SNIPPET Recorder ducked
+# SB Song 2: SNIPPET Recorder norm
+# SB Song 3: SNIPPET Recorder ducked
+# SB Song 4: SNIPPET Recorder norm
 Scene 2.3: Nora, Bella
 
 Scene 3: Frankie, Solly, Ralph, Adam, Alice, Jed
 Scene 3.1: Frankie, Solly, Jed, Ralph, Alice, George, Adam
 Scene 3.1.1: Frankie, Solly, Jed, Ralph, Alice, George
-Scene 3.1.2: Solly, Reverend
+Scene 3.1.2: Solly, Reverend, Ralph
+Scene 3.1.3: Solly, Reverend
 
 Scene 4: Viola, Solly
 Sound Prep: SNIPPET AvalanchePrep
-Scene 4.1: Viola, Solly, Jed, Adam
+Scene 4.0.1: Viola, Solly, Tom
+Scene 4.1: Viola, Solly, Jed, Adam, Tom
 Scene 4.2: Solly, Jed, Adam
 Post Avalanche: SNIPPET AvalanchePost
 
@@ -54,10 +59,9 @@ Scene 9.2: Reverend, Solly
 Act I End:
 
 Scene 10: Adam, Tom, Ann, Viola
-Scene 10.1: Ann, Viola, Tom, Jed
-Scene 10.1.1: Ann, Viola, Tom
+Scene 10.1: Ann, Viola, Tom
 # Song Prep: SNIPPET Recorder -5
-Scene 10.2 Song:
+Scene 10.2:
 Scene 10.3: Ann, Viola, Tom
 Scene 10.4: Ann, Viola
 
@@ -75,7 +79,7 @@ Scene 12.1: Solly, Alice, Frankie, Ralph
 Scene 12.2: Alice, Adam
 Scene 12.3: Alice, Solly
 Scene 12.3.1: Adam, Alice
-Scene 12.4: Adam, Alice, Ralph
+Scene 12.4: Adam, Alice
 Scene 12.5: Alice
 
 Scene 13: Ann, Viola, Solly
@@ -96,18 +100,16 @@ Scene 15.1: Tom, Reverend
 Scene 16: Solly, Viola, Jacob, Tom
 Scene 16.1: Solly, Viola, Jacob, Tom, Reverend, Ann
 Scene 16.2: Solly, Jacob, Tom, Reverend
-# Song Prep: SNIPPET Recorder norm
 Scene 16.4: Solly, Tom, Reverend, Ann
+Song Done: SNIPPET Recorder norm
 Scene 16.5: Solly, Tom, Reverend, Ann, Viola
-# Baby Prep: SNIPPET Recorder -15
 Scene 16.6: Solly, Tom, Reverend, Ann
 Scene 16.6.1: Solly, Tom, Reverend
-# Song Prep: SNIPPET Recorder -7
 Scene 16.7: Jacob, Reverend
 
 Act 2 Break:
 
-Scene 17: Ann, Viola, Solly, Reverend, Jed
+Scene 17: Ann, Viola, Solly, Reverend, Jed, Tom
 Scene 17.1: Ann, Viola, Reverend
 Scene 17.2: Reverend, Tom
 Scene 17.3: Ann, Viola
@@ -115,12 +117,10 @@ Scene 17.4: Alice, Adam
 Scene 17.5: Solly, Reverend, Ann, Viola
 Scene 17.6: Solly, Reverend, Ann, Viola, Jed, Alice
 
-# Song Prep: SNIPPET Recorder -5
 Scene 18 song: Solly, Reverend, Alice, Ann, Viola, Bella
-Scene 18.1: Solly, Reverend
-# Hallelujah Vol: SNIPPET Recorder -20
+Scene 18.1: Solly, Reverend, Frankie
+Scene 18.1.1: Reverend
 Scene 18.2: Alice, Adam, Reverend, Bella
-# Just as I am Vol: SNIPPET Recorder -10
 Scene 18.3: Reverend, Solly, Frankie, Alice
 Scene 18.4 song: Reverend, Solly, Frankie, Alice, Viola
 Scene 18.5: Solly, Viola, Ann, Adam, Alice
@@ -146,7 +146,5 @@ Scene 23.1: Reverend, Solly
 
 Scene 24: Jed, Solly
 Scene 24.1: Solly
-# Quote Vol: SNIPPET Recorder -10
 
-# End Song Vol: SNIPPET Recorder -10
 end:
