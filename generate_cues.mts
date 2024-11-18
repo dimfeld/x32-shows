@@ -2,8 +2,8 @@
 
 import * as fs from "fs";
 
-const showName = "HS2022";
-const inputSceneFile = "HopeStat2022.scn";
+const showName = "RS2024";
+const inputSceneFile = "RosieDiner2024.scn";
 
 const sceneData = fs.readFileSync(inputSceneFile).toString();
 const sceneLines = sceneData.split("\n");
@@ -89,6 +89,8 @@ function createSnippet(name, characters, channelBitmap = cueChannelBitmap) {
 const muteAllSnippet = createSnippet("Mute All Actors", []);
 
 const cueListFile = "cues.txt";
+let previousCharacters: string[] = [];
+
 function processCueLine(line, i) {
   line = line.trim();
   if (!line || line.startsWith("#")) {
@@ -152,6 +154,32 @@ function parseCharacters(name, rest) {
     .split(",")
     .map((c) => c.trim())
     .filter(Boolean);
+
+  // If any character starts with + or -, modify the previous line's characters
+  if (characters.some((c) => c.startsWith("+") || c.startsWith("-"))) {
+    let newCharacters = [...previousCharacters];
+
+    for (const char of characters) {
+      if (char.startsWith("+")) {
+        const charName = char.slice(1).trim();
+        if (!newCharacters.includes(charName)) {
+          newCharacters.push(charName);
+        }
+      } else if (char.startsWith("-")) {
+        const charName = char.slice(1).trim();
+        newCharacters = newCharacters.filter((c) => c !== charName);
+      } else {
+        // If we have a mix of modified and non-modified characters, treat non-modified as additions
+        if (!newCharacters.includes(char)) {
+          newCharacters.push(char);
+        }
+      }
+    }
+
+    characters = newCharacters;
+  }
+
+  previousCharacters = characters;
 
   const cueIndex = cueList.length;
   const fullCueIndex = cueIndex.toString().padStart(3, "0");
