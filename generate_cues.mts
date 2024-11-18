@@ -108,7 +108,7 @@ function processCueLine(line, i) {
   if (rest.startsWith("SNIPPET ")) {
     parseFixedSnippet(name, rest);
   } else {
-    parseCharacters(name, rest);
+    parseCharacters(i, name, rest);
   }
 }
 
@@ -149,7 +149,7 @@ function parseFixedSnippet(name, rest) {
   );
 }
 
-function parseCharacters(name, rest) {
+function parseCharacters(line: number, name: string, rest: string) {
   let characters = (rest || "")
     .split(",")
     .map((c) => c.trim())
@@ -170,9 +170,7 @@ function parseCharacters(name, rest) {
         newCharacters = newCharacters.filter((c) => c !== charName);
       } else {
         // If we have a mix of modified and non-modified characters, treat non-modified as additions
-        if (!newCharacters.includes(char)) {
-          newCharacters.push(char);
-        }
+        throw new Error(`Mixed relative and absolute characters on line ${line}`);
       }
     }
 
