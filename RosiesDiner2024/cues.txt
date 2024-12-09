@@ -1,6 +1,6 @@
 setup: SNIPPET Start
-start: SNIPPET ComputerUnmuted
 
+MuteComputer: SNIPPET MuteComputer
 Scene 1: Frank, Charlie
 Scene 1.1: Frank
 Scene 1.2: Frank, Danny
@@ -45,22 +45,25 @@ Scene 4.4: -Danny
 Scene 4.5: Maureen, Mike
 
 Scene 5: Ethel, Mike, Maureen
-Scene 5.1: +Julie, +Kevin, +Clarence, +Winston
+Scene 5.1: +Julie, +Kevin, +Clarence, +Winston, -Ethel
 Scene 5.2: +Frank, -Maureen
-Scene 5.3: +Maureen
+Scene 5.2.1: Frank, Julie
+Scene 5.2.2: +Kevin, +Joseph
+Scene 5.3: Julie, Frank, Maureen
 Scene 5.3.1: Julie, Frank
 Scene 5.4: Mike, Clarence
 Scene 5.5: +Julie
 Scene 5.6: +Mary, +Kevin, +Clarence, +Winston, +Joseph
 Scene 5.7: +Frank
-Scene 5.8: Winston
-Scene 5.9: Joseph
-Scene 5.10: Mary
+Scene 5.8: Winston, Julie
+Scene 5.9: Joseph, Julie
+Scene 5.10: Mary, Julie
 Scene 5.11: Kevin, Julie
-Scene 5.12: Clarence, Mike, Julie
-Scene 5.13: Kevin
-Scene 5.14: Winston
-Scene 5.15: Winston, Kevin, Clarence, Mary, Joseph
+Scene 5.12: Clarence, Mike, Julie, Kevin, Joseph
+Scene 5.12.1: Clarence, Mike, Julie
+Scene 5.13: Kevin, Julie
+Scene 5.14: Winston, Julie
+Scene 5.15: Winston, Kevin, Clarence, Mary, Joseph, Julie
 Scene 5.16: Mike, Frank, Julie, Ethel
 Scene 5.17: Mike, Frank
 
@@ -81,18 +84,18 @@ Scene 7.1: +Maureen
 
 Scene 8: Mike, Frank, Arthur
 Scene 8.1: -Frank
+Scene 8.1.1: Arthur
 Scene 8.2: Ethel, Mike, Arthur
 Scene 8.3: -Ethel
 Scene 8.4: +Frank
 Scene 8.4.1: -Arthur
-Scene 8.5: +Ethel, +Danny
+Scene 8.5: +Ethel, +Danny, +Maureen
 Scene 8.6: -Danny
-Scene 8.7: +Maureen
-Scene 8.8: Frank, Ethel, Mike
-Scene 8.9: +Maureen, -Mike
-Scene 8.10: Maureen, Frank
-Scene 8.11: Mike, Frank
-Scene 8.12: +Ethel
+Scene 8.7: Frank, Ethel, Mike
+Scene 8.8: +Maureen, -Mike
+Scene 8.9: Maureen, Frank
+Scene 8.10: Mike, Frank
+Scene 8.11: +Ethel
 
 Scene 9: Ethel, Nick, Frank, Mike
 Scene 9.1: -Ethel
@@ -107,18 +110,20 @@ Scene 10: Clara, Mike, Frank
 Scene 10.1: +Ethel
 Scene 10.1.1: -Ethel
 Scene 10.1.2: +Ethel
-Scene 10.2: -Ethel
+Scene 10.2: -Ethel, +Maureen, +Nick
+Scene 10.2.1: -Maureen
 Scene 10.3: +Ethel
 Scene 10.4: -Ethel
 Scene 10.5: +Ethel
 Scene 10.6: -Ethel
-Scene 10.7: Mike, Frank
+Scene 10.7: -Nick
+Scene 10.8: Mike, Frank
 
 Scene 11: Frank, Josie, Mike
 Scene 11.1: +Danny
 Scene 11.2: +Ethel
-Scene 11.3: -Danny
-Scene 11.4: -Ethel, +Maureen
+Scene 11.3: -Danny, +Maureen
+Scene 11.4: -Ethel
 Scene 11.5: +Ethel
 Scene 11.6: Maureen
 Scene 11.7: Maureen, Ethel, Mike, Frank
@@ -147,7 +152,6 @@ Scene 14.1: Charlie, Frank
 Scene 14.2: Frank, Danny
 Scene 14.3: Frank, Ralphie
 Scene 14.4: Frank, Ethel
-Scene 14.5: Frank
 Scene 14.6: Franklin, Cassandra
 Scene 14.7: +Frank
 Scene 14.8: +Kathy
