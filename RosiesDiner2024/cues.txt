@@ -38,14 +38,12 @@ Scene 4: Maureen, Frank, Danny
 Scene 4.0.1: -Danny
 Scene 4.1: +Danny
 Scene 4.2: -Danny
-Scene 4.2.1: +Danny
-Scene 4.2.2: -Danny
 Scene 4.3: +Danny
 Scene 4.4: -Danny
 Scene 4.5: Maureen, Mike
 
 Scene 5: Ethel, Mike, Maureen
-Scene 5.1: +Julie, +Kevin, +Clarence, +Winston, -Ethel
+Scene 5.1: +Julie, +Kevin, +Clarence, +Winston, +Joseph, -Ethel
 Scene 5.2: +Frank, -Maureen
 Scene 5.2.1: Frank, Julie
 Scene 5.2.2: +Kevin, +Joseph
@@ -65,7 +63,8 @@ Scene 5.13: Kevin, Julie
 Scene 5.14: Winston, Julie
 Scene 5.15: Winston, Kevin, Clarence, Mary, Joseph, Julie
 Scene 5.16: Mike, Frank, Julie, Ethel
-Scene 5.17: Mike, Frank
+Scene 5.17: Mike, Frank, Winston, Kevin, Clarence, Mary, Joseph, Julie
+Scene 5.18: Mike, Frank
 
 Scene 6:
 Scene 6.1: Arthur, Maureen, Ethel
@@ -156,7 +155,7 @@ Scene 14.6: Franklin, Cassandra
 Scene 14.7: +Frank
 Scene 14.8: +Kathy
 Scene 14.9: -Frank
-Scene 14.10: +Frank, +Arthur
+Scene 14.10: Frank, Arthur
 
 
 
