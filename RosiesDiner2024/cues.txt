@@ -46,7 +46,7 @@ Scene 5: Ethel, Mike, Maureen
 Scene 5.1: +Julie, +Kevin, +Clarence, +Winston, +Joseph, -Ethel
 Scene 5.2: +Frank, -Maureen
 Scene 5.2.1: Frank, Julie
-Scene 5.2.2: +Kevin, +Joseph
+Scene 5.2.2: +Kevin, +Joseph, +Maureen
 Scene 5.3: Julie, Frank, Maureen
 Scene 5.3.1: Julie, Frank
 Scene 5.4: Mike, Clarence
@@ -62,7 +62,9 @@ Scene 5.12.1: Clarence, Mike, Julie
 Scene 5.13: Kevin, Julie
 Scene 5.14: Winston, Julie
 Scene 5.15: Winston, Kevin, Clarence, Mary, Joseph, Julie
-Scene 5.16: Mike, Frank, Julie, Ethel
+Scene 5.16: Mike, Frank, Julie
+Scene 5.16.1: +Ethel
+Scene 5.16.2: -Ethel
 Scene 5.17: Mike, Frank, Winston, Kevin, Clarence, Mary, Joseph, Julie
 Scene 5.18: Mike, Frank
 
@@ -79,7 +81,7 @@ Scene 6.5: +Ethel, +Danny
 Scene 6.6: Mike, Maureen
 
 Scene 7: Mike, Kathy
-Scene 7.1: +Maureen
+Scene 7.1: Mike, Maureen
 
 Scene 8: Mike, Frank, Arthur
 Scene 8.1: -Frank
@@ -109,8 +111,9 @@ Scene 10: Clara, Mike, Frank
 Scene 10.1: +Ethel
 Scene 10.1.1: -Ethel
 Scene 10.1.2: +Ethel
-Scene 10.2: -Ethel, +Maureen, +Nick
-Scene 10.2.1: -Maureen
+Scene 10.2: -Ethel
+Scene 10.2.1: +Maureen, +Nick, -Mike
+Scene 10.2.2: -Maureen, +Mike
 Scene 10.3: +Ethel
 Scene 10.4: -Ethel
 Scene 10.5: +Ethel
@@ -120,10 +123,12 @@ Scene 10.8: Mike, Frank
 
 Scene 11: Frank, Josie, Mike
 Scene 11.1: +Danny
-Scene 11.2: +Ethel
+Scene 11.2: +Ethel, -Josie
 Scene 11.3: -Danny, +Maureen
 Scene 11.4: -Ethel
 Scene 11.5: +Ethel
+Scene 11.5.1: -Maureen
+Scene 11.5.2: +Maureen
 Scene 11.6: Maureen
 Scene 11.7: Maureen, Ethel, Mike, Frank
 Scene 11.7.1: Mike, Frank
