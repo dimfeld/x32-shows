@@ -2,13 +2,13 @@
 
 import * as fs from "fs";
 
-const showName = "Rosie2024";
-const inputSceneFile = "Rosie2024Input.scn";
+const showName = "Rosie2025";
+const inputSceneFile = "Rosie2025Input.scn";
 
 const sceneData = fs.readFileSync(inputSceneFile).toString();
 const sceneLines = sceneData.split("\n");
 
-const activeChannels = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22];
+const activeChannels = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23];
 
 const maxActiveChannel = Math.max(...activeChannels);
 const characterChannels = Object.fromEntries(
@@ -199,7 +199,7 @@ fs.readFileSync(cueListFile).toString().split("\n").forEach(processCueLine);
 const show = [
   ...showHeader,
   ...cueList,
-  `scene/000 "Rosie2024" "" %000000000 1`,
+  `scene/000 "Rosie2025" "" %000000000 1`,
   ...snippetList,
 ].join("\n");
 
