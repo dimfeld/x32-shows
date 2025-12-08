@@ -388,7 +388,7 @@
 /ch/11/mix/16 ON  +3.3
 /ch/11/grp %00000001 %000011
 /ch/11/automix OFF -12.0
-/ch/12/config "Clara" 41 WH 13
+/ch/12/config "Clara" 41 WH 12
 /ch/12/delay OFF   0.3
 /ch/12/preamp +0.0 OFF OFF 24  79
 /ch/12/gate ON GATE -64.5 60.0 0 1.12 2050 0
@@ -580,7 +580,7 @@
 /ch/17/mix/16 ON  +2.0
 /ch/17/grp %00000001 %000011
 /ch/17/automix OFF -12.0
-/ch/18/config "Mary" 41 WH 13
+/ch/18/config "Mary" 41 WH 12
 /ch/18/delay OFF   0.3
 /ch/18/preamp -8.0 OFF OFF 24  79
 /ch/18/gate ON GATE -67.5 60.0 1  502  983 0
@@ -644,7 +644,7 @@
 /ch/19/mix/16 ON  +2.5
 /ch/19/grp %00000001 %000011
 /ch/19/automix OFF -12.0
-/ch/20/config "Kevin M" 23 WH 31
+/ch/20/config "Kevin M" 23 WH 9
 /ch/20/delay OFF   0.3
 /ch/20/preamp +0.8 OFF ON 24  79
 /ch/20/gate ON GATE -70.0 60.0 1  502  983 0

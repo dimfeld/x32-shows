@@ -112,8 +112,8 @@ Scene 10.1: +Ethel
 Scene 10.1.1: -Ethel
 Scene 10.1.2: +Ethel
 Scene 10.2: -Ethel
-Scene 10.2.1: +Maureen, +Nick, -Mike
-Scene 10.2.2: -Maureen, +Mike
+Scene 10.2.1: +Maureen, -Mike, -Nick, +Kathy
+Scene 10.2.2: -Maureen, +Mike, +Nick, -Kathy
 Scene 10.3: +Ethel
 Scene 10.4: -Ethel
 Scene 10.5: +Ethel
